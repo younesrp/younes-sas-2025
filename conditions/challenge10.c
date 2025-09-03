@@ -2,11 +2,8 @@
 
 int main() {
     int jour, mois, annee;
-    char *moisNom[12] = {
-        "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
-        "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
-    };
-    printf("entrez la date : ");
+
+    printf("Entrez la date : ");
     scanf("%d/%d/%d", &jour, &mois, &annee);
 
     if (mois < 1 || mois > 12) {
@@ -14,7 +11,22 @@ int main() {
         return 0;
     }
 
-    printf("%d-%s-%d\n", jour, moisNom[mois - 1], annee);
+    printf("%d-", jour);
+
+    if (mois == 1) printf("Janvier");
+    else if (mois == 2) printf("Février");
+    else if (mois == 3) printf("Mars");
+    else if (mois == 4) printf("Avril");
+    else if (mois == 5) printf("Mai");
+    else if (mois == 6) printf("Juin");
+    else if (mois == 7) printf("Juillet");
+    else if (mois == 8) printf("Août");
+    else if (mois == 9) printf("Septembre");
+    else if (mois == 10) printf("Octobre");
+    else if (mois == 11) printf("Novembre");
+    else if (mois == 12) printf("Décembre");
+
+    printf("-%d\n", annee);
 
     return 0;
 }
